@@ -1,0 +1,36 @@
+/* СБРОС СТИЛЕЙ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    font-family: sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  ul, ol {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  button, input, textarea {
+    font: inherit;
+    border: none;
+    background: none;
+    outline: none;
+  }
+  

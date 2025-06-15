@@ -1,0 +1,111 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: rgba(238, 172, 16, 0.538);
+    
+    background-repeat: repeat;
+    
+  }
+  
+  /* Остальное без изменений */
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+  }
+  
+  a {
+    color: var(--accent-color);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: var(--accent-hover);
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: #fffdf8;
+    color: var(--text-color);
+  }
+  
+  .flex-row {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  div, span {
+    border: 1px solid #663a07e0;
+    }
+
+
+
+    .layout {
+      display: flex;
+      min-height: 100vh;
+    }
+    
+    /* Сайдбар */
+    .sidebar {
+      width: 220px;
+      background-color: #f0a208; /* темно-серый */
+      color: #fff;
+      padding: 20px;
+    }
+    
+    .nav-items {
+      list-style: none;
+      margin-top: 20px;
+    }
+    
+    .nav-items li {
+      margin-bottom: 10px;
+    }
+    
+    .nav-items a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      display: block;
+      border-radius: 4px;
+    }
+    
+    .nav-items a:hover {
+      background-color: #374151; /* чуть светлее */
+    }
+    
+    /* Основной контент */
+    .content {
+      flex: 1;
+      padding: 40px;
+      background-color: #fff;
+    }
