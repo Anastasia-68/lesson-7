@@ -1,36 +1,67 @@
-/* СБРОС СТИЛЕЙ */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  background: none;
+  font: inherit; /* наследовать шрифт */
+  text-decoration: none; /* убрать подчеркивание ссылок */
+  color: inherit; /* наследовать цвет */
+  vertical-align: baseline;
+}
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html, body {
-    height: 100%;
-    font-family: sans-serif;
-    background-color: #f0f0f0;
-  }
-  
-  ul, ol {
-    list-style: none;
-  }
-  
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-  }
-  
-  button, input, textarea {
-    font: inherit;
-    border: none;
-    background: none;
-    outline: none;
-  }
-  
+html, body {
+  line-height: 1;
+  font-size: 100%;
+  background-color: white;
+  /* height: 100%;  - Удалено, требует родительского элемента с height: 100% */
+}
+
+ul, ol {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none; /* Или использовать content: '' для большей надежности */
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: '';
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+}
+
+a {
+  /* text-decoration: none; - уже установлено в * */
+  /* color: inherit; - уже установлено в * */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
