@@ -1,13 +1,12 @@
-/* Базовые стили */
 body {
   font-family: 'Segoe UI', sans-serif;
   font-size: 16px;
   line-height: 1.6;
-  background-color: rgba(253, 182, 16, 0.426);
+  background-color: #f6d102c4; 
   background-repeat: repeat;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,h2,h3,h4,h5,h6 {
   color: var(--text-color);
   margin-bottom: 1rem;
 }
@@ -22,7 +21,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Контейнер */
 .container {
   width: 90%;
   max-width: 1200px;
@@ -30,7 +28,6 @@ a:hover {
   padding: 20px;
 }
 
-/* Кнопки */
 .button {
   display: inline-block;
   padding: 10px 20px;
@@ -45,7 +42,6 @@ a:hover {
 .button:hover {
   background-color: var(--accent-hover);
 }
-
 /* Формы */
 input[type="text"],
 input[type="email"],
@@ -59,23 +55,18 @@ textarea {
   color: var(--text-color);
 }
 
-/* Гибкая сетка */
 .flex-row {
   display: flex;
   flex-direction: row;
   gap: 20px;
 }
 
-
 .layout {
   display: flex;
-  min-height: 100vh; /* растягиваем по высоте окна */
+  min-height: 100vh;
   overflow: hidden;
 }
 
-
-
-/*  Навигация */
 .nav-items {
   list-style: none;
   margin-top: 20px;
@@ -98,32 +89,30 @@ textarea {
   background-color: #9b4007d3;
 }
 
-
 .content {
   flex: 1;
   padding: 40px;
-  background-color: #fff;
-}
+  background-color: #f6d102c4; 
 
-/* Рамки для div и span */
-div, span {
+}
+ 
+div,span {
   border: 1px solid #663a07e0;
 }
+
 .sidebar div,
 .sidebar span {
   border: none !important;
 }
-
 /* Стили к изучению Css свойств */
-
 /* Flex контейнер по горизонтали */
 .flex-container {
   display: flex;
-  flex-direction: row; /* горизонтально */
+  flex-direction: row;
   gap: 5px;
   background-color: #f0f0f0;
   padding: 10px;
-  width: auto; /* можно убрать фиксированную ширину */
+  width: auto;
 }
 
 .box-content {
@@ -142,16 +131,14 @@ div, span {
   border: 2px solid #333;
   background-color: #81deeaa9;
 }
-.flex-container > div {
+
+.flex-container>div {
   background-color: #b0e0e6;
   padding: 10px;
   border: 1px solid #333;
 }
 
-
-
 /* Практика c float та clear */
-
 /* Блоки с float */
 .box {
   width: 120px;
@@ -194,7 +181,6 @@ div, span {
 }
 
 /* Эксперементы с overflow */
-
 .overflow-row {
   display: flex;
   flex-wrap: wrap;
@@ -237,6 +223,7 @@ h2 {
 .overflow-auto {
   overflow: auto;
 }
+
 .sidebar {
   flex: 0 0 200px;
   max-width: 200px;
@@ -244,22 +231,39 @@ h2 {
   padding: 15px;
   box-sizing: border-box;
 }
+
 .box-wrapper {
-  margin-bottom: 0;
+  flex: 1 1 calc(25% - 15px);
+  min-width: 200px;
+  max-width: 280px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
+
+.box-wrapper h2 {
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 1em;
+}
+
 .main-content {
   flex: 1;
   padding: 15px;
   overflow-y: auto;
 }
-/* Позиционирование элементов */
 
+/* Позиционирование элементов */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
- .fixed-box {
+
+.fixed-box {
   position: fixed;
   top: 10px;
   right: 10px;
@@ -270,7 +274,8 @@ h2 {
 }
 
 .container {
-  margin: 10px 10px 10px 10px; /* вверх — из‑за fixed */
+  margin: 10px 10px 10px 10px;
+  /* вверх — из‑за fixed */
 }
 
 .sidebar {
@@ -286,23 +291,24 @@ h2 {
   padding: 15px;
   overflow-y: auto;
 }
+
 .layout {
   display: flex;
   width: 100%;
   overflow-x: hidden;
 }
 
-
-/* Ряд без прокрутки */
 .row {
   display: flex;
   gap: 20px;
-  flex-wrap: wrap; /* переносим, если экран узкий */
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 /* Общий стиль блоков */
 .box {
-  flex: 1 1 200px; /* адаптивно ширина */
+  flex: 1 1 200px;
   min-width: 200px;
   padding: 12px;
   border: 1px solid #555;
@@ -310,7 +316,9 @@ h2 {
 }
 
 /* Цветовые стили */
-.static-box { background: #e0e0e0; }
+.static-box {
+  background: #e0e0e0;
+}
 
 .relative-box {
   position: relative;
@@ -319,20 +327,23 @@ h2 {
   background: #d1c4e9;
   border-color: #673ab7;
 }
+
+.absolute-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ce93d8;
+}
+
 .absolute-container {
   position: relative;
   background: #f3e5f5;
   border: 1px dashed #9c27b0;
-  min-height: 120px;
+  height: 100px;
+  width: 100%;
 }
-.absolute-box {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background: #ce93d8;
-  border: 1px solid #7b1fa2;
-  padding: 6px;
-}
+
 .sticky-box {
   position: sticky;
   top: 0;
@@ -340,11 +351,25 @@ h2 {
   border: 1px solid #388e3c;
 }
 
-/* Заполнитель */
 .spacer {
   height: 300px;
 }
 
-html, body {
+html,
+body {
   overflow-x: hidden;
+}
+
+.main-content .box {
+  flex: 1 1 200px;
+  min-width: 180px;
+  max-width: 250px;
+  padding: 12px;
+  border: 1px solid #555;
+  background: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100px;
 }
