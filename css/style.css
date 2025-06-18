@@ -2,7 +2,7 @@ body {
   font-family: 'Segoe UI', sans-serif;
   font-size: 16px;
   line-height: 1.6;
-  background-color: #f6d102c4; 
+  background-color:white; 
   background-repeat: repeat;
 }
 
@@ -92,7 +92,7 @@ textarea {
 .content {
   flex: 1;
   padding: 40px;
-  background-color: #f6d102c4; 
+  background-color:white; 
 
 }
  
